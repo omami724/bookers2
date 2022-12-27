@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <!--cssの貼り付け忘れずに<link rel="stylesheet" href="style.css" />-->
+    <title>Bookers2Ver2</title>
+  </head>
+
+
+<% @books.each do |book| %>
+<div>
+  <p><%#= image_tag 'sample-author1.jpg' %></p>
+  <p><%= book.title %></p>
+  <p><%= book.body %></p>
+  <p><%= book.user.name %></p>
+  
+</div>
+<% end %>
+
+<div>
+  <h3><%= @user.name %></h3>
+  <%= image_tag @user.get_profile_image(100,100) %>
+</div>
+
+
+<footer>
+    <div class="container mt-5">
+    <p>CopyRight Infratop.inc</p>
+    </div>
+   </div>
+  </div>
+</footer>
